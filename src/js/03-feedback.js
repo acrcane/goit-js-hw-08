@@ -36,8 +36,13 @@ function handleSubmitForm(e) {
 function hahdleFillValue() {
   const storage = getMessageToLocalStorage();
 
-  if (storage) {
+  if (storage && storage.email && storage.message) {
     form.elements.email.value = storage.email;
     form.elements.message.value = storage.message;
+  } else {
+    form.elements.email.value = '';
+    form.elements.message.value = '';
   }
+  formData.email = form.elements.email.value;
+  formData.message = form.elements.message.value;
 }

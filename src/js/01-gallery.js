@@ -26,7 +26,7 @@ function addToHtml(container){
     container.innerHTML = createLightboxGallery(galleryItems)
 }
 
-const lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
     captionSelector: 'img',
     captionsData: 'alt',
     captionDelay: 250,
