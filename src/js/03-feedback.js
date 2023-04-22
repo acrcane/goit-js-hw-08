@@ -29,20 +29,20 @@ function getMessageToLocalStorage() {
 function handleSubmitForm(e) {
   e.preventDefault();
 
-  localStorage.removeItem(FORM_MESSAGE_KEY);
-  form.reset();
+  if(form.elements.email.value && form.elements.message.value){
+    localStorage.removeItem(FORM_MESSAGE_KEY)
+    form.reset();
+    formData = {};
+  }
+  return
 }
 
 function hahdleFillValue() {
   const storage = getMessageToLocalStorage();
 
-  if (storage && storage.email && storage.message) {
-    form.elements.email.value = storage.email;
-    form.elements.message.value = storage.message;
-  } else {
-    form.elements.email.value = '';
-    form.elements.message.value = '';
-  }
+  form.elements.email.value = storage?.email || '';
+  form.elements.message.value = storage?.message || '';
+
   formData.email = form.elements.email.value;
   formData.message = form.elements.message.value;
 }

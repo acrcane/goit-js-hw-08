@@ -30,5 +30,5 @@ new SimpleLightbox('.gallery a', {
     captionSelector: 'img',
     captionsData: 'alt',
     captionDelay: 250,
-    preload: false
+    preload: false,
 })
