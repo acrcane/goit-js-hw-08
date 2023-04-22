@@ -33,8 +33,10 @@ function handleSubmitForm(e) {
     localStorage.removeItem(FORM_MESSAGE_KEY)
     form.reset();
     formData = {};
+  } else {
+    console.log('Please fill in all fields');
   }
-  return
+  // return
 }
 
 function hahdleFillValue() {
