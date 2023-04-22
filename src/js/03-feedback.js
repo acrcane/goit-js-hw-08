@@ -1,6 +1,7 @@
 import throttle from 'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
+console.log('TEST TEST TEST');
 
 document.addEventListener('DOMContentLoaded', hahdleFillValue);
 form.addEventListener('submit', handleSubmitForm);
@@ -33,10 +34,10 @@ function handleSubmitForm(e) {
     localStorage.removeItem(FORM_MESSAGE_KEY)
     form.reset();
     formData = {};
-  } else {
-    console.log('Please fill in all fields');
+  // } else {
+  //   console.log('Please fill in all fields');
   }
-  // return
+  return
 }
 
 function hahdleFillValue() {
