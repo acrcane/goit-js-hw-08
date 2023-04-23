@@ -8,7 +8,7 @@ form.addEventListener('submit', handleSubmitForm);
 form.addEventListener('input', throttle(handleSaveMessage, 500));
 
 const FORM_MESSAGE_KEY = 'feedback-form-state';
-const formData = {};
+let formData = {};
 
 function handleSaveMessage(e) {
   formData[e.target.name] = e.target.value;
